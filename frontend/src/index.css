@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 11px;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+}
+
+.custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(15,23,42,0.12); border-radius: 999px; }
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(15,23,42,0.22); }
+
+.tab-active {
+  color: #2304CF;
+  border-bottom: 2px solid #2304CF;
+}
+
+@keyframes emergency-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(186,26,26,0.55); }
+  50% { transform: scale(1.12); box-shadow: 0 0 0 6px rgba(186,26,26,0); }
+}
+.animate-emergency-pulse {
+  animation: emergency-pulse 0.9s ease-in-out 3;
+}
+
+@keyframes message-highlight-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(186,26,26,0); background-color: transparent; }
+  25%, 75% { box-shadow: 0 0 0 4px rgba(186,26,26,0.35); background-color: rgba(255,218,214,0.5); }
+}
+.message-highlight {
+  animation: message-highlight-glow 1.4s ease-in-out 2;
+  border-radius: 12px;
+}

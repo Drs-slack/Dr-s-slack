@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: drs-slack-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: drslack
+      POSTGRES_PASSWORD: drslack
+      POSTGRES_DB: drslack
+    ports:
+      - "5432:5432"
+    volumes:
+      - drs_slack_pgdata:/var/lib/postgresql/data
+
+volumes:
+  drs_slack_pgdata:
