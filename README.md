@@ -11,7 +11,7 @@ caught before it's finalized** — across **two** independent safety checks:
 - **Treatments** — a new treatment plan is checked against the patient's
   allergies, diagnoses, *and* other departments' active treatment plans.
 
-Both checks are deterministic (rule-based, no LLM) and run synchronously
+Both checks are deterministic (rule-based,  LLM) and run synchronously
 before the record is saved, so the alert appears while the doctor is still
 composing the order/treatment — not after.
 
