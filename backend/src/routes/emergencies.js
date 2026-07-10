@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { query } from '../db.js';
 import { requireAuth } from '../middleware.js';
 
+
 const router = Router();
 
 // Global list of active "emergency" tagged notes, across ALL patients —
